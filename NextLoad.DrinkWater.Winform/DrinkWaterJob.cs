@@ -13,8 +13,7 @@ namespace NextLoad.DrinkWater.Winform
         {
             try
             {
-                FrmMain frm = new FrmMain();
-                frm.NotifyMsg();
+                FrmMain.CreateFrm().NotifyMsg();
             }
             catch (Exception e)
             {

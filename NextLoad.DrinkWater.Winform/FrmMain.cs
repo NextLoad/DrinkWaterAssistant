@@ -16,15 +16,33 @@ namespace NextLoad.DrinkWater.Winform
 {
     public partial class FrmMain : Form
     {
-        public FrmMain()
+        private static FrmMain _frmMain;
+        private static object obj = new object();
+        private FrmMain()
         {
             InitializeComponent();
+        }
+
+        public static FrmMain CreateFrm()
+        {
+            if (_frmMain == null)
+            {
+                lock (obj)
+                {
+                    if (_frmMain == null)
+                    {
+                        _frmMain = new FrmMain();
+                    }
+                }
+            }
+
+            return _frmMain;
         }
 
         public void NotifyMsg()
         {
             this.notifyIcon1.Icon = NextLoad.DrinkWater.Winform.Properties.Resources.hot_drink_128px_1231620_easyicon_net;
-            this.notifyIcon1.ShowBalloonTip(10000, "温馨提示", "到喝水时间了,该喝水了...", ToolTipIcon.Info);
+            this.notifyIcon1.ShowBalloonTip(60000 * 60, "温馨提示", "到喝水时间了,该喝水了...", ToolTipIcon.Info);
         }
         private void FrmMain_Load(object sender, EventArgs e)
         {
@@ -35,7 +53,7 @@ namespace NextLoad.DrinkWater.Winform
             this.Visible = false;
             this.ShowInTaskbar = false;
             string msg = ConfigurationManager.AppSettings["msg"];
-            this.notifyIcon1.ShowBalloonTip(10000, "温馨提示", msg, ToolTipIcon.Info);
+            this.notifyIcon1.ShowBalloonTip(60000, "温馨提示", msg, ToolTipIcon.Info);
             StartScheduleJob();
         }
 

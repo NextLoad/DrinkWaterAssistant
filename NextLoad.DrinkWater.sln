@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextLoad.DrinkWater.Winform", "NextLoad.DrinkWater.Winform\NextLoad.DrinkWater.Winform.csproj", "{8B151559-916A-486F-8CF4-A0DEF66602D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextLoad.DrinkWater.WinServices", "NextLoad.DrinkWater.WinServices\NextLoad.DrinkWater.WinServices.csproj", "{791E831D-84AB-4EF6-8CF9-D87E51CFC135}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B151559-916A-486F-8CF4-A0DEF66602D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B151559-916A-486F-8CF4-A0DEF66602D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B151559-916A-486F-8CF4-A0DEF66602D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B151559-916A-486F-8CF4-A0DEF66602D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791E831D-84AB-4EF6-8CF9-D87E51CFC135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791E831D-84AB-4EF6-8CF9-D87E51CFC135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791E831D-84AB-4EF6-8CF9-D87E51CFC135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791E831D-84AB-4EF6-8CF9-D87E51CFC135}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D79420CF-08D3-4528-AD49-A7E9680AA41F}
+	EndGlobalSection
+EndGlobal

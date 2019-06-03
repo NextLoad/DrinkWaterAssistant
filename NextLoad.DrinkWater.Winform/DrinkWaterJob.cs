@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ namespace NextLoad.DrinkWater.Winform
             }
             catch (Exception e)
             {
-                System.IO.File.AppendAllText(@"C:\log.txt", e.Message);
+                string path = AppDomain.CurrentDomain.BaseDirectory;
+                System.IO.File.AppendAllText(Path.Combine(path, "LogFile", "log.txt"), e.Message);
             }
 
         }
